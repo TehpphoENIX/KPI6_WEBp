@@ -1,0 +1,15 @@
+.main-footer{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background: #444444;
+
+    /* font-family: 'Inter'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #FFFFFF;
+}

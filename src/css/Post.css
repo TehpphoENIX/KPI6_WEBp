@@ -1,0 +1,10 @@
+.post__head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post__img{
+    max-width: 640px;
+    max-height: 480px;
+}
