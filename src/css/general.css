@@ -38,3 +38,10 @@
 
 color: #000000;
 }
+
+.editor {
+    border: 1px solid #000000;
+    width: 100%;
+    min-height: 100px;
+    padding: 8px;
+}
