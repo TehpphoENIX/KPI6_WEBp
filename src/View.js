@@ -11,37 +11,37 @@ import { useState, useRef } from 'react'
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
 import PostEditor from './jsx/PostEditor'
 
-const SaveButton = ({setMode}) => (
-    <div onClick={() => setMode(false)}>
-        save
-    </div>
-)
-
 const ViewPage = () => {
-    let post = useLoaderData();
+    let post = useLoaderData()
     const [mode, setMode] = useState(false);
-    let postReference = useRef(post)
-
     if(post != null){
+        let localPost = Object.assign({},post)
+
+        
         return (<>
             <Header/>
             <div class='main-body'>
                 {
-                    (mode)?
-                        <>
-                        <div class='editor-bar'>
-                            <SaveButton setMode = {setMode}/>
-                        </div>
-                        <PostEditor postReference = {postReference}/>
-                        </>
-                    :
+                (mode)?
                     <>
-                        <div class='editor-bar'>
-                            <button class='editor-bar__button' onClick={() => setMode(true)}>
-                                edit
-                            </button>
-                        </div>
-                        <Post post = {post} /> 
+                    <div class='editor-bar'>
+                        <button onClick={() => {
+                                Object.assign(post, localPost)
+                                setMode(false)
+                            }}>
+                            save
+                        </button>
+                    </div>
+                    <PostEditor post = {localPost}/>
+                    </>
+                :
+                    <>
+                    <div class='editor-bar'>
+                        <button class='editor-bar__button' onClick={() => setMode(true)}>
+                            edit
+                        </button>
+                    </div>
+                    <Post post = {post} /> 
                     </>
                 }
             </div>

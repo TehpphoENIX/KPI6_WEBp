@@ -1,3 +1,7 @@
+.post{
+    width: 100%;
+}
+
 .post__head{
     display: flex;
     flex-direction: row;
