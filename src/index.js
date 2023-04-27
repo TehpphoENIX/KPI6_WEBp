@@ -56,11 +56,9 @@ const router = createBrowserRouter(
     <Route
       path="create"
       element={<CreatePage creationCallback={(newPost)=>{
-        console.log(postArray)
         let id = postArray.length
         newPost.id = id
         postArray.push(Object.assign({},newPost))
-        console.log(postArray)
         return id
       }}/>}
     />

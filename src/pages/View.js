@@ -25,7 +25,7 @@ const ViewPage = () => {
                 (mode)?
                     <>
                     <div class='editor-bar'>
-                        <button onClick={() => {
+                        <button class='editor-bar__button' onClick={() => {
                                 Object.assign(post, localPost)
                                 setMode(false)
                             }}>
@@ -45,6 +45,7 @@ const ViewPage = () => {
                     </>
                 }
             </div>
+            <div class='dummy'></div>
             <Footer/>
         </>);
     }else

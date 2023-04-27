@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import PostEditor from '../components/PostEditor'
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const CreatePage = ({creationCallback}) => {
     let localPost = {
@@ -13,18 +13,22 @@ const CreatePage = ({creationCallback}) => {
         imageAlt:'',
         text:''
     }
+    const navigate = useNavigate()
     return (
         <>
         <Header/>
+        <div class='main-body'>
             <div class='editor-bar'>
-                <button onClick={() => {
+                <button class='editor-bar__button' onClick={() => {
                         let id = creationCallback(localPost)
-                        return <Navigate to={`/${id}`} />
+                        navigate(`/${id}`)
                     }}>
                     create
                 </button>
             </div>
             <PostEditor post = {localPost}/>
+        </div>
+        <div class='dummy'></div>
         <Footer/>
         </>
     )

@@ -5,7 +5,8 @@ import { useLoaderData } from 'react-router-dom';
 const PageNotFound = () => {
     return (<>
         <Header/>
-        PageNotFound
+        <p>PageNotFound</p>
+        <div class='dummy'></div>
         <Footer/>
     </>);
 };
