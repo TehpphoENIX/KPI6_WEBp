@@ -1,7 +1,7 @@
-import Header from './jsx/Header';
-import Footer from './jsx/Footer';
-import Post from './jsx/Post'
-import './css/general.css'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Post from '../components/Post'
+import '../css/general.css'
 
 const MainPage = ({postArray}) => (
   <>
@@ -9,6 +9,7 @@ const MainPage = ({postArray}) => (
     <div class='main-body'>
       {postArray.map(post => <Post post = {post} referencing = {true} />)}
     </div>
+    <div class='dummy'></div>
     <Footer/>
   </>
 );

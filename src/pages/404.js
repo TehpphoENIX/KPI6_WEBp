@@ -1,5 +1,5 @@
-import Header from './jsx/Header';
-import Footer from './jsx/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { useLoaderData } from 'react-router-dom';
 
 const PageNotFound = () => {

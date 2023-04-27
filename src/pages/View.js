@@ -1,15 +1,15 @@
-import Header from './jsx/Header'
-import Footer from './jsx/Footer'
-import Post from './jsx/Post'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Post from '../components/Post'
 import { useLoaderData } from 'react-router-dom'
 import PageNotFound from './404'
 
-import './css/general.css'
+import '../css/general.css'
 import { useState, useRef } from 'react'
 
 //import { Editor } from "react-draft-wysiwyg"
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
-import PostEditor from './jsx/PostEditor'
+import PostEditor from '../components/PostEditor'
 
 const ViewPage = () => {
     let post = useLoaderData()

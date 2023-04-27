@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import Main from './Main';
-import View from './View';
-import PageNotFound from './404';
-import reportWebVitals from './reportWebVitals';
-
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from 'react-router-dom';
+
+import './css/index.css';
+
+import reportWebVitals from './reportWebVitals';
+
+import Main from './pages/Main';
+import View from './pages/View';
+import PageNotFound from './pages/404';
+import CreatePage from './pages/Create';
 
 const postArray = [
   {
@@ -39,18 +42,28 @@ const router = createBrowserRouter(
     <>
     <Route path="/" element={<Main postArray={postArray} />} />
     <Route 
-        path=":id" 
-        loader={({params})=>{
-          const found = postArray.find(element => element.id == params.id);
-
-          if(found == undefined){
-            return null
-          }else{
-            return found
-          }
-        }}
-        element={<View/>}
-      />
+      path=":id" 
+      loader={({params})=>{
+        const found = postArray.find(element => element.id == params.id);
+        if(found == undefined){
+          return null
+        }else{
+          return found
+        }
+      }}
+      element={<View/>}
+    />
+    <Route
+      path="create"
+      element={<CreatePage creationCallback={(newPost)=>{
+        console.log(postArray)
+        let id = postArray.length
+        newPost.id = id
+        postArray.push(Object.assign({},newPost))
+        console.log(postArray)
+        return id
+      }}/>}
+    />
     </>
   ))
 );
