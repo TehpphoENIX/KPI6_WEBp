@@ -14,15 +14,16 @@ const CreatePage = ({creationCallback}) => {
         text:''
     }
     const navigate = useNavigate()
+    const onClickHandler = () => {
+        let id = creationCallback(localPost)
+        navigate(`/${id}`)
+    }
     return (
         <>
         <Header/>
         <div class='main-body'>
             <div class='editor-bar'>
-                <button class='editor-bar__button' onClick={() => {
-                        let id = creationCallback(localPost)
-                        navigate(`/${id}`)
-                    }}>
+                <button class='editor-bar__button' onClick={onClickHandler}>
                     create
                 </button>
             </div>

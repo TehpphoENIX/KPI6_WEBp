@@ -10,7 +10,7 @@ const Post = ({post, referencing}) => (
         <p class='post__date'>{post.date}</p>
       </div>
     </div>
-    <div class='post__text' dangerouslySetInnerHTML={{ __html: post.text}}/>
+    <div class='post__text' data-testid="contents-text" dangerouslySetInnerHTML={{ __html: post.text}}/>
     <img class='post__img' src={post.imageSrc} alt={post.imageAlt}/>
   </div>
 );

@@ -17,7 +17,6 @@ const ViewPage = () => {
     if(post != null){
         let localPost = Object.assign({},post)
 
-        
         return (<>
             <Header/>
             <div class='main-body'>
