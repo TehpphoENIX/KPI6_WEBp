@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "WEBp", "WEBp\WEBp.njsproj", "{505C35D7-6A96-408D-B695-FF099BE263F7}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ExpressApp", "ExpressApp\ExpressApp.njsproj", "{DB7A1B83-364B-4E51-9F23-F6ACA05142B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{505C35D7-6A96-408D-B695-FF099BE263F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505C35D7-6A96-408D-B695-FF099BE263F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505C35D7-6A96-408D-B695-FF099BE263F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505C35D7-6A96-408D-B695-FF099BE263F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB7A1B83-364B-4E51-9F23-F6ACA05142B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7A1B83-364B-4E51-9F23-F6ACA05142B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7A1B83-364B-4E51-9F23-F6ACA05142B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7A1B83-364B-4E51-9F23-F6ACA05142B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {898158BC-0FAB-4819-936B-89734CA06FAF}
+	EndGlobalSection
+EndGlobal
